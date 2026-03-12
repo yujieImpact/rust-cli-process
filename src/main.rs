@@ -1,3 +1,7 @@
+use clap::Parser;
+use my_cli::Opts;
+
 fn main() {
-    println!("Hello, rust!");
+    let opt = Opts::parse();
+    println!("{:?}", opt);
 }
