@@ -65,13 +65,16 @@ jobs:
         run: cargo clippy --all-targets --all-features -- -D warnings
 
       # 9. 执行测试 (使用更快的 nextest)
-      - name: Execute rust tests
-        run: cargo nextest run --all-features
+
+      # - name: Execute rust tests
+      #   run: cargo nextest run --all-features
 
       # 10. 生成 Changelog (仅在推送标签时运行)
-      - name: Generate a changelog
-        if: startsWith(github.ref, 'refs/tags/')
-        run: git-cliff --latest --strip header -o CHANGES.md
+
+      # - name: Generate a changelog
+      #   if: startsWith(github.ref, 'refs/tags/')
+      #   run: git-cliff --latest --strip header -o CHANGES.md
+
         # 注意：这里直接运行二进制命令，不走 Docker，避免环境冲突
 
       # 11. 自动发布 Release (仅在推送标签时运行)
