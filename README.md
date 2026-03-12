@@ -1,4 +1,4 @@
-# Geektime Rust 语言训练营
+# RUST cli project
 
 ## 环境设置
 
@@ -81,3 +81,4 @@ cargo nextest 是一个 Rust 增强测试工具。
 ```bash
 cargo install cargo-nextest --locked
 ```
+## 这是一个RUST的cli命令行工具
