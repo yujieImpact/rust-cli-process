@@ -5,11 +5,11 @@ use std::string::String;
 #[command(name = "my-cli", about = "我的cli命令行程序")]
 pub struct Opts {
     #[command(subcommand)]
-    cmd: Subcommand,
+    pub cmd: Subcommand,
 }
 
 #[derive(Debug, Parser)]
-enum Subcommand {
+pub enum Subcommand {
     #[command(name = "csv", about = "convert csv to json")]
     Csv(CsvOpts),
 }
